@@ -6,10 +6,7 @@
         "Action": "sts:AssumeRole",
         "Effect": "Allow",
         "Principal": {
-          "Service": [
-            "build.apprunner.amazonaws.com",
-            "tasks.apprunner.amazonaws.com"
-          ]
+          "Service": ${jsonencode(service)}
         }
       }
     ]
